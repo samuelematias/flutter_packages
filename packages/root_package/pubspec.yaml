@@ -11,8 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  other_package:
-    path: ../other_package
+  increment_counter_package:
+    path: ../increment_counter_package
 
   cupertino_icons: ^0.1.3
 
