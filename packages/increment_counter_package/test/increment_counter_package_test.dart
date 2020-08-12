@@ -1,13 +1,27 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:increment_counter_package/increment_counter_package.dart';
+import 'package:increment_counter_package/app/ui/increment_counter/increment_counter_page.dart';
 
 void main() {
-  test('adds one to input values', () {
-    final calculator = Calculator();
-    expect(calculator.addOne(2), 3);
-    expect(calculator.addOne(-7), -6);
-    expect(calculator.addOne(0), 1);
-    expect(() => calculator.addOne(null), throwsNoSuchMethodError);
+  // Create a MaterialApp to test.
+  Widget _makeTestable(Widget widget) => MaterialApp(home: widget);
+  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+    // Create the widget to test.
+    final widget = IncrementCounterPage(title: 'Flutter Packages Test Demo');
+
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(_makeTestable(widget));
+
+    // Verify that our counter starts at 0.
+    expect(find.text('0'), findsOneWidget);
+    expect(find.text('1'), findsNothing);
+
+    // Tap the '+' icon and trigger a frame.
+    await tester.tap(find.byIcon(Icons.add));
+    await tester.pump();
+
+    // Verify that our counter has incremented.
+    expect(find.text('0'), findsNothing);
+    expect(find.text('1'), findsOneWidget);
   });
 }
