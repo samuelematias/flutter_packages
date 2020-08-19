@@ -18,11 +18,7 @@
 
 This app is an example of how you can use Packages/Modules in your Flutter project.
 
-<br/>
-
 ## Creating the project structure 𝌤
-
-<br/>
 
 - Creating our repository
 
@@ -44,8 +40,6 @@ This app is an example of how you can use Packages/Modules in your Flutter proje
 
 ## Creating our packages
 
-<br/>
-
 - Entering the packages folder
 
   ```bash
@@ -63,8 +57,6 @@ This app is an example of how you can use Packages/Modules in your Flutter proje
   ```bash
   flutter create -t package other_package
   ```
-
-  <br/>
 
 ## Tech Stack 👩🏾‍💻
 
