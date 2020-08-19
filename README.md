@@ -18,6 +18,54 @@
 
 This app is an example of how you can use Packages/Modules in your Flutter project.
 
+<br/>
+
+## Creating the project structure 𝌤
+
+<br/>
+
+- Creating our repository
+
+  ```bash
+  mkdir flutter_packages
+  ```
+
+- Entering our newly created directory
+
+  ```bash
+  cd flutter_packages
+  ```
+
+- Creating our package folder
+
+  ```bash
+  mkdir packages
+  ```
+
+## Creating our packages
+
+<br/>
+
+- Entering the packages folder
+
+  ```bash
+  cd packages
+  ```
+
+- Creating our app package
+
+  ```bash
+  flutter create root_package
+  ```
+
+- Creating our first package
+
+  ```bash
+  flutter create -t package other_package
+  ```
+
+  <br/>
+
 ## Tech Stack 👩🏾‍💻
 
 - [Dart](https://dart.dev/)
